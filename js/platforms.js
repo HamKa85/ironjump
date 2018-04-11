@@ -39,7 +39,7 @@ var platforms = [
   {
     x: 0,
     y: -1000,
-    width: 200
+    width: 400
   },
   {
     x: 400,
@@ -70,6 +70,11 @@ var platforms = [
     x: 400,
     y: -4000,
     width: 200
+  },
+   {
+    x: 400,
+    y: -4500,
+    width: 300
   },
 ]
 

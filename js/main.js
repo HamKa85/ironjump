@@ -85,7 +85,7 @@ function play() {
     y: height/2,
     vx: 0,
     vy: 10,
-    color: 'black',
+    color: 'yellow',
   }
   camera = {
     y: 0,
@@ -114,12 +114,12 @@ function update() {
   }
   
   var newBall = {
-    radius: 50,
+    radius: 20,
     x: ball.x + ball.vx,
     y: ball.y + ball.vy,
     vx: ball.vx*0.9,
     vy: ball.vy + gravity,
-    color: 'black',
+    color: 'green',
   }
 
   for (var i = 0; i < platforms.length; i++) {
