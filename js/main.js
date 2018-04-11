@@ -1,12 +1,8 @@
 var ctx;
-var width = 1000; // Default value is 1000
-var height = 1700; // Default value is 1700
 var ball = {};
 var camera = {};
-gravity = 5; // Default value is 5
-intervalTimeout = 25; // Default value is 25
 var intervalId;
-var debug = true; // Change it to false to remove the grid
+
 
 
 // When all the HTML is loaded
@@ -40,10 +36,10 @@ $(document).ready(function() {
 $(document).keydown(function(e) {
   switch(e.which) {
     case 37: // left
-      ball.vx -= 20
+      ball.vx -= 30
       break;
     case 39: // right
-      ball.vx += 20
+      ball.vx += 30
       break;
     case 32: // space
       changeBgColor();
@@ -80,7 +76,7 @@ function play() {
   $(".menu").hide();
   $("canvas").show();
   ball = {
-    radius: 50,  
+    radius: 70,  
     x: width/2,
     y: height/2,
     vx: 0,
@@ -99,11 +95,11 @@ function play() {
 }
 
 function changeBgColor() {
-  if ($("canvas").css("background-color") == "rgb(255, 60, 60)") {
+  if ($("canvas").css("background-color") == "rgb(138, 255, 100)") {
     $("canvas").css("background-color", "rgb(100, 110, 255)");
   }
   else {
-    $("canvas").css("background-color", "rgb(255, 60, 60)");
+    $("canvas").css("background-color", "rgb(138, 255, 100)");
   }
 }
 
@@ -114,12 +110,12 @@ function update() {
   }
   
   var newBall = {
-    radius: 20,
+    radius: 30,
     x: ball.x + ball.vx,
     y: ball.y + ball.vy,
     vx: ball.vx*0.9,
     vy: ball.vy + gravity,
-    color: 'green',
+    color: 'yellow',
   }
 
   for (var i = 0; i < platforms.length; i++) {

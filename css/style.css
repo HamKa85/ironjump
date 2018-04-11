@@ -1,5 +1,11 @@
 html {
   font-family: sans-serif;
+  background-color : lightblue;
+  color : MediumSeaGreen;
+}
+
+h1 {
+ 
 }
 
 .container {
@@ -35,6 +41,10 @@ canvas {
 
 .menu .best-score {
   margin: 20px;
+  color : red;
+  border: 2px solid black;
+    padding: 5px;
+  border-radius: 25px;
 }
 
 .menu h1 {
